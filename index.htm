@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Simple Weather app">
+    <meta name="keywords" content="Weather">
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <form onsubmit="weatherNow(event)">
+      <input
+        type="text"
+        placeholder="Enter your city"
+        name="city"
+        onkeydown="getCity(event)"
+      />
+      <button>Search</button>
+    </form>
+    <div class="card">
+      <p class="what__city"><span>What the city whould you know the weather about it?</span> &#128580;</p>
+      <p class="loading">Is Loading..</p>
+      <p class="error">Hmm.. city not found</p>
+      <div class="card_content">
+        <div class="img_temp">
+          <div class="weather_img"></div>
+          <p class="weather_temp"></p>
+        </div>
+        <p class="weather_status"></p>
+        <div class="location">
+          <div class="location_icon">
+            <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-m9simb" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="LocationOnOutlinedIcon"><path fill="hsl(233, 94%, 13%)" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7M7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.88-2.88 7.19-5 9.88C9.92 16.21 7 11.85 7 9"></path><circle fill="hsl(233, 94%, 13%)" cx="12" cy="9" r="2.5"></circle></svg>
+          </div>
+          <h1 class="city_name"></h1>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
