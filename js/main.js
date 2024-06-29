@@ -10,11 +10,11 @@ let weatherInfo = {
 }
 let { isLoading, error, srcWeather, temp, statusWeather, cityName } = weatherInfo
 function getCity(event) {
-    city = event.target.value
+    city = event.target.value;
 }
 async function weatherNow(event) {
     event.preventDefault();
-    document.querySelector('.what__city').style.display='none'
+    document.querySelector('.what__city').style.display = 'none'
     isLoading = true;
     error = false;
     updateCardContent();
