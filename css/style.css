@@ -1,0 +1,121 @@
+:root {
+    --title:hsl(233, 94%, 13%);
+    --error: hsl(0, 56%, 46%);
+    --card-bg: hsla(217, 38%, 35%, 0.623);
+    --white:hsl(0, 0%, 100%);
+    --btn-bg: hsl(233, 66%, 33%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+form input {
+    padding: .5rem;
+    border: 1px solid var(--btn-bg);
+    outline: none;
+    border-radius: .3rem;
+    font-size: 1rem;
+    color: var(--btn-bg);
+}
+
+form button {
+    padding: .6rem;
+    font-size: 1rem;
+    color: var(--white);
+    background: var(--btn-bg);
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.card .what__city{
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--title);
+}
+.card .what__city span{
+    font-style: italic;
+
+}
+.loading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+    display: none;
+}
+
+.error {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--error);
+    display: none;
+}
+
+.card {
+    width: 21%;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: var(--card-bg);
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card_content {
+    display: none;
+}
+
+.card .card_content .img_temp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .card_content .img_temp .weather_temp {
+    font-size: 2rem;
+    font-weight: 100;
+    color: var(--title);
+}
+
+.card .card_content .weather_status {
+    font-weight: 100;
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--title);
+    margin: 1rem 0;
+}
+
+.card .card_content .location {
+    display: flex;
+    justify-content: center;
+}
+
+.card .card_content .location h1 {
+    text-transform: capitalize;
+    color: var(--title);
+    font-weight: 400;
+}
+
+.card .card_content .location .location_icon {
+    width: 15%;
+    margin-right: .5rem;
+}
+
+.card .card_content .location .location_icon svg {
+    width: 100%;
+}
