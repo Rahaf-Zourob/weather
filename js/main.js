@@ -8,7 +8,7 @@ let weatherInfo = {
     srcWeather: '',
     statusWeather: ''
 }
-let { isLoading, error, srcWeather, temp, statusWeather, cityName } = weatherInfo
+let { ...info } = weatherInfo
 function getCity(event) {
     city = event.target.value;
 }
@@ -21,7 +21,6 @@ async function weatherNow(event) {
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
     const response = await fetch(apiUrl)
     const data = await response.json()
-    console.log(data)
     isLoading = false
     if (data.cod == 200) {
         cityName = data.name
