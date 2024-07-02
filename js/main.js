@@ -34,6 +34,7 @@ async function weatherNow(event) {
 function updateCardContent() {
     if (isLoading) {
         document.querySelector('.error').style.display = 'none';
+        document.querySelector('.card_content').style.display = 'none';
         document.querySelector('.loading').style.display = 'block';
     } else if (error == false) {
         document.querySelector('.loading').style.display = 'none';
